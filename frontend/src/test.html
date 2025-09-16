@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>🐷 Direct Test Page</h1>
+    <p>If you can see this, the server is working!</p>
+    <p>Current time: <span id="time"></span></p>
+    <script>
+        document.getElementById('time').textContent = new Date().toLocaleString();
+        console.log('Direct test page loaded successfully!');
+    </script>
+</body>
+</html>

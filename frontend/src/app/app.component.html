@@ -1,0 +1,24 @@
+<div class="app-container">
+  <!-- Show header only on protected routes -->
+  <header 
+    *ngIf="isAuthenticated && currentRoute && currentRoute !== '/login'" 
+    class="app-header">
+    <div class="header-content">
+      <h1>🐷 Grisedata Innsamler</h1>
+      
+      <div class="user-info" *ngIf="currentUser">
+        <span class="welcome">Velkommen, {{ currentUser.full_name }}</span>
+        <span class="farmer-id">{{ currentUser.farmer_id }}</span>
+        
+        <button type="button" class="logout-btn" (click)="logout()">
+          Logg ut
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="app-main" [class.with-header]="isAuthenticated && currentRoute && currentRoute !== '/login'">
+    <router-outlet></router-outlet>
+  </main>
+</div>
