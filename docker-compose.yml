@@ -1,0 +1,38 @@
+services:
+  backend:
+    build: ./backend
+    container_name: kameraveiing-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./data/app.db
+      - JWT_SECRET=your-super-secure-jwt-secret-key-change-in-production
+      - SECRET_KEY=your-flask-secret-key-change-in-production
+      - ANIMALIA_CLIENT_ID=ingris-datainnsamling
+      - ANIMALIA_CLIENT_SECRET=90ac8421-75a8-41b5-8ba1-93b47faf5b27
+      - ANIMALIA_ENVIRONMENT=staging
+      - FRONTEND_URL=http://172.17.250.146:4200
+      - ANIMALIA_REDIRECT_URI=http://172.17.250.146:8000/api/auth/oauth/callback
+    volumes:
+      - backend_data:/app/data
+      - backend_sessions:/app/flask_session
+    networks:
+      - kameraveiing-network
+
+  frontend:
+    build: ./frontend
+    container_name: kameraveiing-frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - kameraveiing-network
+
+volumes:
+  backend_data:
+  backend_sessions:
+
+networks:
+  kameraveiing-network:
+    driver: bridge

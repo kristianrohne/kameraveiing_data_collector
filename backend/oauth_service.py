@@ -25,7 +25,7 @@ class AnimaliaOAuthService:
             self.keys_url = 'https://staging-sso.animalia.no/keys'
             self.logout_url = 'https://staging-sso.animalia.no/logout'
             
-        self.redirect_uri = os.getenv('ANIMALIA_REDIRECT_URI', 'http://172.17.250.225:8000/api/auth/oauth/callback')
+        self.redirect_uri = os.getenv('ANIMALIA_REDIRECT_URI', 'http://172.17.250.146:8000/api/auth/oauth/callback')
         print(f"🔧 OAuth Service initialized with redirect_uri: {self.redirect_uri}")
         
     def get_authorization_url(self, state: str = None) -> str:

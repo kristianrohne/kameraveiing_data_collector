@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+dist
+.angular
+coverage
+.nyc_output
+.git
+.DS_Store
+*.md
+.env.local
+.env.development
+.env.test
