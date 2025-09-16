@@ -4,11 +4,16 @@
     *ngIf="isAuthenticated && currentRoute && currentRoute !== '/login'" 
     class="app-header">
     <div class="header-content">
-      <h1>🐷 Grisedata Innsamler</h1>
+      <div class="header-title">
+        <h1>🐷 Grisedata Innsamler</h1>
+      </div>
+      
+      <div class="header-center">
+        <img src="/logo-animalia-hoved-2.svg" alt="Animalia Logo" class="header-logo">
+      </div>
       
       <div class="user-info" *ngIf="currentUser">
-        <span class="welcome">Velkommen, {{ currentUser.full_name }}</span>
-        <span class="farmer-id">{{ currentUser.farmer_id }}</span>
+        <span class="welcome">Velkommen, {{ currentUser.name }}</span>
         
         <button type="button" class="logout-btn" (click)="logout()">
           Logg ut

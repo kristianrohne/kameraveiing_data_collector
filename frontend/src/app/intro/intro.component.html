@@ -7,7 +7,7 @@
   <!-- Slide 1 -->
   <div class="slide" [class.active]="currentSlide === 0">
     <h2>Hvordan ta bilde</h2>
-    <img src="app/intro/static/instruction.png" alt="Step 1">
+    <img src="/instruction.png" alt="Step 1">
     <p>Hold telefonen rett over grisen, fra fugleperspektiv. Hele grisen skal være synlig i bildet.</p>
     <div class="buttons">
       <button class="intro-btn primary" (click)="nextSlide()">Neste</button>
@@ -17,8 +17,8 @@
   <!-- Slide 2 -->
   <div class="slide" [class.active]="currentSlide === 1">
     <h2>Eksempler på gode bilder</h2>
-    <img src="app/intro/static/good.png" alt="Godt bilde">
-    <img src="app/intro/static/good2.png" alt="Godt bilde">
+    <img src="/good.png" alt="Godt bilde">
+    <img src="/good2.png" alt="Godt bilde">
     <p>Bildene er klare, grisene er sentrerte og bakgrunnen er enkel.</p>
     <div class="buttons">
       <button class="intro-btn" (click)="prevSlide()">Forrige</button>
@@ -29,16 +29,16 @@
   <!-- Slide 3 -->
   <div class="slide" [class.active]="currentSlide === 2">
     <h2>Eksempler på dårlige bilder</h2>
-    <img src="app/intro/static/legs.png" alt="Dårlig bilde">
+    <img src="/legs.png" alt="Dårlig bilde">
     <p>Dessverre er programmet dårlig til å skille mellom bein og gris, grisen må stå for seg selv.</p>
-    <img src="app/intro/static/object.jpg" alt="Dårlig bilde">
+    <img src="/object.jpg" alt="Dårlig bilde">
     <p>Unngå objekter over grisen.</p>
-    <img src="app/intro/static/too_many.png" alt="Dårlig bilde">
+    <img src="/too_many.png" alt="Dårlig bilde">
     <p>Programmet klarer ikke å skille mellom flere gris, grisen må stå for seg selv.</p>
-    <img src="app/intro/static/cut.png" alt="Dårlig bilde">
+    <img src="/cut.png" alt="Dårlig bilde">
     <p>Få med hele grisen på bildet.</p>
     <p>Det går bra om hele hodet ikke er med, men hele kroppen må være på bildet.</p>
-    <img src="app/intro/static/too_blurry.png" alt="Dårlig bilde">
+    <img src="/too_blurry.png" alt="Dårlig bilde">
     <p>Bildet må være klart og skarpt.</p>
     <div class="buttons">
       <button class="intro-btn" (click)="prevSlide()">Forrige</button>
